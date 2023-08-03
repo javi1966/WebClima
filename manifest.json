@@ -1,9 +1,9 @@
 {
     "name": "Estacion Meteorologica",
-    "short_name": "Meteo app",
+    "short_name": "Estacion Meteorologica",
     "theme_color": "#000000",
     "background_color": "#000000",
     "display": "fullscreen",
     "orientation": "landscape",
-    "start_url": "/est-meteo/"
+    "start_url": "/WebClima/"
   }
