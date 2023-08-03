@@ -5,5 +5,6 @@
     "background_color": "#000000",
     "display": "fullscreen",
     "orientation": "landscape",
-    "start_url": "/WebClima/"
+    "start_url": "/WebClima",
+    "lang": "es-ES"
   }
