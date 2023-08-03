@@ -143,6 +143,7 @@ footer {
 }
 
 .blink {
-  animation: fade 2000ms infinite;
+  
   -webkit-animation: fade 2000ms infinite;
+  animation: fade 2000ms infinite;
 }
