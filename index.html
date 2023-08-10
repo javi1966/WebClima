@@ -4,71 +4,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!--   CSS                  -->
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="manifest" href=".\manifest.json" >
+    <link rel="manifest" href="./manifest.json" />
 
     <title>Climanode</title>
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <marquee id="marText">No Funciona</marquee>
-      </div>
+    <div class="header">
+      <marquee id="marText">No Funciona</marquee>
+    </div>
 
+    <div class="container">
       <div class="horario">
-        <div id="idHora" >
+        <div id="idHora">
           <span></span> <span class="blink">:</span> <span></span>
         </div>
 
-        <div id="idFecha" ></div>
+        <div id="idFecha"></div>
 
         <div>
           <img id="wicon" src="" alt="Icono Clima" />
         </div>
-
       </div>
 
-      <br><br><br>
+      
 
-      <div  class="content">
-        <div >
+      <!--  content clima -->
+
+      <div class="content_clima">
+
+        <div>
           <canvas id="gauTemp"></canvas>
         </div>
 
-        <canvas
-          id="gauTempMin"
-          data-type="linear-gauge"
-          data-width="100"
-          data-height="250"
-          
-          data-units="°C"
-          data-title="Temp Min"
-          data-min-value="0"
-          data-start-angle="90"
-          data-ticks-angle="180"
-          data-value-box="true"
-          data-max-value="60"
-          data-major-ticks="[-10,0, 10, 20, 30, 40, 50 ,60]"
-          data-minor-ticks="2"
-          data-stroke-ticks="true"
-          data-color-plate="#222"
-          data-color-numbers="#eee"
-          data-color-title="rgba(0,255,255, 1)"
-          data-color-units="#ccc"
-          data-border-shadow-width="0"
-          data-borders="false"
-          data-needle-type="arrow"
-          data-needle-width="2"
-          data-needle-circle-size="7"
-          data-needle-circle-outer="true"
-          data-needle-circle-inner="false"
-          data-animation-duration="1500"
-          data-animation-rule="linear"
-          data-bar-width="10"
-          data-highlights='[
+        <div>
+          <canvas
+            id="gauTempMin"
+            data-type="linear-gauge"
+            data-width="100"
+            data-height="250"
+            data-units="°C"
+            data-title="Temp Min"
+            data-min-value="0"
+            data-start-angle="90"
+            data-ticks-angle="180"
+            data-value-box="true"
+            data-max-value="60"
+            data-major-ticks="[-10,0, 10, 20, 30, 40, 50 ,60]"
+            data-minor-ticks="2"
+            data-stroke-ticks="true"
+            data-color-plate="#222"
+            data-color-numbers="#eee"
+            data-color-title="rgba(0,255,255, 1)"
+            data-color-units="#ccc"
+            data-border-shadow-width="0"
+            data-borders="false"
+            data-needle-type="arrow"
+            data-needle-width="2"
+            data-needle-circle-size="7"
+            data-needle-circle-outer="true"
+            data-needle-circle-inner="false"
+            data-animation-duration="1500"
+            data-animation-rule="linear"
+            data-bar-width="10"
+            data-highlights='[
         {
             "from": -10,
             "to": 10,
@@ -89,41 +91,43 @@
           "to": 60,
           "color": "rgba(255,255, 51, .8)"
         }]'
-          data-value-int="2"
-          data-value-dec="2"
-        >
-        </canvas>
-
-        <canvas
-          id="gauTempMax"
-          data-type="linear-gauge"
-          data-width="100"
-          data-height="250"
-          data-units="°C"
-          data-title="Temp Max"
-          data-min-value="0"
-          data-start-angle="90"
-          data-ticks-angle="180"
-          data-value-box="true"
-          data-max-value="60"
-          data-major-ticks="[-10,0, 10, 20, 30, 40, 50 ,60]"
-          data-minor-ticks="2"
-          data-stroke-ticks="true"
-          data-color-plate="#222"
-          data-color-numbers="#eee"
-          data-color-title="rgba(255,0,0, 1)"
-          data-color-units="#ccc"
-          data-border-shadow-width="0"
-          data-borders="false"
-          data-needle-type="arrow"
-          data-needle-width="2"
-          data-needle-circle-size="7"
-          data-needle-circle-outer="true"
-          data-needle-circle-inner="false"
-          data-animation-duration="1500"
-          data-animation-rule="linear"
-          data-bar-width="10"
-          data-highlights='[
+            data-value-int="2"
+            data-value-dec="2"
+          >
+          </canvas>
+        </div>
+        
+        <div>
+          <canvas
+            id="gauTempMax"
+            data-type="linear-gauge"
+            data-width="100"
+            data-height="250"
+            data-units="°C"
+            data-title="Temp Max"
+            data-min-value="0"
+            data-start-angle="90"
+            data-ticks-angle="180"
+            data-value-box="true"
+            data-max-value="60"
+            data-major-ticks="[-10,0, 10, 20, 30, 40, 50 ,60]"
+            data-minor-ticks="2"
+            data-stroke-ticks="true"
+            data-color-plate="#222"
+            data-color-numbers="#eee"
+            data-color-title="rgba(255,0,0, 1)"
+            data-color-units="#ccc"
+            data-border-shadow-width="0"
+            data-borders="false"
+            data-needle-type="arrow"
+            data-needle-width="2"
+            data-needle-circle-size="7"
+            data-needle-circle-outer="true"
+            data-needle-circle-inner="false"
+            data-animation-duration="1500"
+            data-animation-rule="linear"
+            data-bar-width="10"
+            data-highlights='[
        {
            "from": -10,
            "to": 10,
@@ -146,12 +150,13 @@
        }
  
         ]'
-          data-value-int="2"
-          data-value-dec="2"
-        >
-        </canvas>
+            data-value-int="2"
+            data-value-dec="2"
+          >
+          </canvas>
+        </div>
 
-        <div >
+        <div>
           <canvas
             id="gauHum"
             data-type="radial-gauge"
@@ -207,8 +212,7 @@
           </canvas>
         </div>
 
-        
-        <div >
+        <div>
           <canvas
             id="gauPres"
             data-type="radial-gauge"
@@ -264,7 +268,7 @@
           </canvas>
         </div>
 
-        <div >
+        <div>
           <canvas
             id="gauCompas"
             data-type="radial-gauge"
@@ -318,11 +322,10 @@
             data-value-int="3"
             data-title="Compas"
           >
-            </canvas
-          >
+          </canvas>
         </div>
 
-        <div >
+        <div>
           <canvas
             id="gauVeloc"
             data-type="radial-gauge"
@@ -378,10 +381,34 @@
           >
           </canvas>
         </div>
-
-       
       </div>
-      <!--  content -->
+      <!--  content polucion -->
+
+      <div class="content_polucion">
+
+           <div>
+             <canvas id="gauCO"></canvas>
+           </div>
+
+           <div>
+              <canvas id="gauNO2"></canvas>
+           </div>
+
+           <div>
+             <canvas id="gauO3"></canvas>
+           </div>
+
+           <div>
+              <canvas id="gauSO2"></canvas>
+           </div>
+
+           <div>
+              <canvas id="gauPM10"></canvas>
+           </div>
+
+          
+
+      </div>
 
       <footer>
         <marquee id="idMedida">No funciona</marquee>
@@ -392,17 +419,18 @@
     <div id="toast"></div>
 
     <script src="js/gauge.min.js"></script>
-    <script src="js/index.js"></script>
+    <script  src="js/gauge.polucion.config.js" ></script>
+    <script src="js/index.js" ></script>
 
-    <script>
-
-      if('serviceWorker' in navigator){
-
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js');
+ 
+    <script  type="module">
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
         });
       }
-
     </script>
+
+   
   </body>
 </html>

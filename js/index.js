@@ -1,7 +1,13 @@
+//import { gaugeCO } from "gauge.polucion.config.js";
+
 const ciudad = "Sevilla";
 const pais = "ES";
 const apikey = "c2ecf0a83c555c2054704fd94ff29f9e";
 const URI = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apikey}&units=metric`;
+
+//Calidad del aire
+const ninjasApiKey="RjSBBFp7kBNHZa3gWEFuAA==2XqINLqdoaNTiSXc"
+const urlCalidaAire="https://api.api-ninjas.com/v1/airquality?city=sevilla"
 
 let hora = "";
 let minu = "";
@@ -11,6 +17,16 @@ let humedad = "";
 let presion = "";
 let descripcion = "";
 let velocidad = "";
+
+//Polucion Aire
+
+let CO = 0;
+let NO2 = 0;
+let O3 = 0;
+let PM2_5=0;
+let PM10 = 0;
+let SO2 = 0;
+let overall_aqi = 0;
 
 const HtmlHora = document.getElementById("idHora");
 const Fecha = document.getElementById("idFecha");
@@ -44,6 +60,34 @@ const getClima = async (ciudad, pais) => {
     console.error("Error midiendo de thingspeak Temp. Interior");
   }
 };
+
+//**************************************************************************
+ 
+const getCalidadAire= async () => {
+
+  console.log(urlCalidaAire);
+
+  try {
+
+    let response = await fetch(urlCalidaAire,{headers:{ "X-Api-Key":ninjasApiKey}});
+
+    let data = await response.json();
+
+    console.log(`CO:${data.CO.concentration},NO2:${data.NO2.concentration},O3:${data.O3.concentration}
+        ,PM10:${data.PM10.concentration},,SO2:${data.SO2.concentration},Total:${data.overall_aqi}  `);
+
+    gaugeCO.value=data.CO.concentration
+    gaugeNO2.value=data.NO2.concentration
+    gaugeO3.value=data.O3.concentration
+    gaugeSO2.value=data.SO2.concentration
+    gaugePM10.value=data.PM10.concentration
+   
+
+
+  } catch (error) {
+    console.error("Error midiendo api https://api-ninjas.com/");
+  }
+}
 
 //************************************************************************************ */
 
@@ -248,7 +292,7 @@ const medida = async () => {
       console.log(iconUrl);
       document.getElementById("wicon").setAttribute("src", iconUrl); 
     
-   
+      getCalidadAire();
 
 
   } catch (error) {
@@ -258,7 +302,7 @@ const medida = async () => {
  
 };
 
-//*********************************************************************************** */
+//************************************************************************************************
 
 window.addEventListener("DOMContentLoaded", () => {
   console.log("Iniciando...");
@@ -268,6 +312,7 @@ window.addEventListener("DOMContentLoaded", () => {
   setInterval("medida()", 3600000); // 1h
   setInterval("reloj()", 50000); //50 seg.
 
+  
   reloj();
   medida();
 });

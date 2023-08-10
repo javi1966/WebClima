@@ -18,12 +18,28 @@ body {
   align-items: center;
 }
 
-.content {
+.content_clima {
   display:flex;
   justify-content: space-between;
-  bottom: 40%;
- 
+  align-items: center;
   
+  width: 100%;
+  
+}
+
+.content_polucion {
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+ 
+}
+
+.content_polucion canvas {
+  
+  height:250px;
+  width: 250px;
 }
 
  
