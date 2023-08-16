@@ -30,12 +30,9 @@
         </div>
       </div>
 
-      
-
       <!--  content clima -->
 
       <div class="content_clima">
-
         <div>
           <canvas id="gauTemp"></canvas>
         </div>
@@ -96,7 +93,7 @@
           >
           </canvas>
         </div>
-        
+
         <div>
           <canvas
             id="gauTempMax"
@@ -385,29 +382,25 @@
       <!--  content polucion -->
 
       <div class="content_polucion">
+        <div>
+          <canvas id="gauCO"></canvas>
+        </div>
 
-           <div>
-             <canvas id="gauCO"></canvas>
-           </div>
+        <div>
+          <canvas id="gauNO2"></canvas>
+        </div>
 
-           <div>
-              <canvas id="gauNO2"></canvas>
-           </div>
+        <div>
+          <canvas id="gauO3"></canvas>
+        </div>
 
-           <div>
-             <canvas id="gauO3"></canvas>
-           </div>
+        <div>
+          <canvas id="gauSO2"></canvas>
+        </div>
 
-           <div>
-              <canvas id="gauSO2"></canvas>
-           </div>
-
-           <div>
-              <canvas id="gauPM10"></canvas>
-           </div>
-
-          
-
+        <div>
+          <canvas id="gauPM10"></canvas>
+        </div>
       </div>
 
       <footer>
@@ -419,18 +412,15 @@
     <div id="toast"></div>
 
     <script src="js/gauge.min.js"></script>
-    <script  src="js/gauge.polucion.config.js" ></script>
-    <script src="js/index.js" ></script>
+    <script src="js/gauge.polucion.config.js"></script>
+    <script src="js/index.js"></script>
 
- 
-    <script >
+    <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("./sw.js");
         });
       }
     </script>
-
-   
   </body>
 </html>
