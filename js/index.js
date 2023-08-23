@@ -127,81 +127,6 @@ const degToCompass = (num) => {
 
 //********************************************************************************************** */
 
-const gaugeTemperatura = new RadialGauge({
-  renderTo: "gauTemp",
-  colorValueBoxRectEnd: "#333",
-  colorValueBoxRect: "#222",
-  valueBoxBorderRadius: 0,
-  colorNeedleCircleInnerEnd: "#222",
-  colorNeedleCircleInner: "#111",
-  colorNeedleCircleOuterEnd: "#111",
-  colorNeedleCircleOuter: "#333",
-  colorNeedleShadowDown: "#333",
-  colorBorderInnerEnd: "#333",
-  colorBorderInner: "#111",
-  colorBorderMiddleEnd: "#111",
-  colorBorderMiddle: "#222",
-  colorBorderOuterEnd: "#111",
-  colorBorderOuter: "#333",
-  animationRule: "bounce",
-  animationDuration: 1200,
-  needleCircleInner: false,
-  needleCircleOuter: true,
-  needleCircleSize: 7,
-  needleWidth: 2,
-  needleType: "arrow",
-  borders: true,
-  borderShadowWidth: 0,
-  colorPlate: "#222",
-  colorNumbers: "#eee",
-  colorUnits: "#ccc",
-  colorTitle: "#eee",
-  colorMinorTicks: "#ddd",
-  colorMajorTicks: "#ddd",
-
-  highlights: [
-    {
-      from: -10,
-      to: 10,
-      color: "rgba(0,0, 255, .3)",
-    },
-    {
-      from: 10,
-      to: 30,
-      color: "rgba(0,255, 0, .8)",
-    },
-    {
-      from: 30,
-      to: 40,
-      color: "rgba(255,0, 0, .7)",
-    },
-    {
-      from: 40,
-      to: 60,
-      color: "rgba(255,255, 51, .8)",
-    },
-  ],
-  valueInt: 2,
-  valueDec: 1,
-  strokeTicks: true,
-  minorTicks: 2,
-  majorTicks: [-10, 0, 10, 20, 30, 40, 50, 60],
-  maxValue: 60,
-  minValue: -10,
-  title: "Temperatura",
-  units: "°C",
-  height: 250,
-  width: 250,
-}).draw();
-
-const gaugeHumedad = new RadialGauge({
-  renderTo: "gauHum",
-}).draw();
-
-const gaugePresion = new RadialGauge({
-  renderTo: "gauPres",
-}).draw();
-
 const gaugeVeloc = new RadialGauge({
   renderTo: "gauVeloc",
 }).draw();
@@ -261,12 +186,18 @@ const medida = async () => {
 
      //GAUGES
      gaugeTemperatura.value = data.main.temp;
-     document.getElementById("gauTempMin").setAttribute("data-value",data.main.temp_min)
-     document.getElementById("gauTempMax").setAttribute("data-value",data.main.temp_max)
-     document.getElementById("gauHum").setAttribute("data-value",data.main.humidity)
-     document.getElementById("gauPres").setAttribute("data-value", data.main.pressure)
-     document.getElementById("gauCompas").setAttribute("data-value",data.wind.deg)
-     document.getElementById("gauVeloc").setAttribute("data-value",data.wind.speed)
+     gauTempMin.value = data.main.temp_min;
+     gauTempMax.value = data.main.temp_max;
+     gaugeHumedad.value=data.main.humidity;
+     gaugePresion.value=data.main.pressure;
+     gaugeCompas.value=data.wind.deg;
+     gaugeVelocidad.value=data.wind.speed;
+     //document.getElementById("gauTempMin").setAttribute("data-value",data.main.temp_min)
+     //document.getElementById("gauTempMax").setAttribute("data-value",data.main.temp_max)
+     //document.getElementById("gauHum").setAttribute("data-value",data.main.humidity)
+     //document.getElementById("gauPres").setAttribute("data-value", data.main.pressure)
+     //document.getElementById("gauCompas").setAttribute("data-value",data.wind.deg)
+     //document.getElementById("gauVeloc").setAttribute("data-value",data.wind.speed)
 
       //footer
 
@@ -299,7 +230,6 @@ const medida = async () => {
     console.error(`Fallo al conectar con ${URI}`)
   }
 
- 
 };
 
 //************************************************************************************************

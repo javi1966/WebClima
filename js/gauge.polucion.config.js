@@ -56,8 +56,8 @@
     minValue: 0,
     title: "CO",
     units: "mg/m3",
-    height: 250,
-    width: 250,
+   // height: 250,
+    //width: 250,
   }).draw();
 
   //************************************************************************************************ */
@@ -114,8 +114,8 @@
     minValue: 0,
     title: "NO2",
     units: "mg/m3",
-    height: 250,
-    width: 250,
+   // height: 250,
+    //width: 250,
   }).draw();
 
  
@@ -173,8 +173,8 @@
     minValue: 0,
     title: "O3",
     units: "mg/m3",
-    height: 250,
-    width: 250,
+    //height: 250,
+    //width: 250,
   }).draw();
 
   //********************************************************************** */
@@ -231,8 +231,8 @@
     minValue: 0,
     title: "SO2",
     units: "mg/m3",
-    height: 250,
-    width: 250,
+   // height: 250,
+   // width: 250,
   }).draw();
 
   //********************************************************************** */
@@ -289,6 +289,6 @@
     minValue: 0,
     title: "PM10",
     units: "mg/m3",
-    height: 250,
-    width: 250,
+   // height: 250,
+   // width: 250,
   }).draw();

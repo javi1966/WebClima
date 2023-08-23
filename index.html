@@ -38,346 +38,29 @@
         </div>
 
         <div>
-          <canvas
-            id="gauTempMin"
-            data-type="linear-gauge"
-            data-width="100"
-            data-height="250"
-            data-units="°C"
-            data-title="Temp Min"
-            data-min-value="0"
-            data-start-angle="90"
-            data-ticks-angle="180"
-            data-value-box="true"
-            data-max-value="60"
-            data-major-ticks="[-10,0, 10, 20, 30, 40, 50 ,60]"
-            data-minor-ticks="2"
-            data-stroke-ticks="true"
-            data-color-plate="#222"
-            data-color-numbers="#eee"
-            data-color-title="rgba(0,255,255, 1)"
-            data-color-units="#ccc"
-            data-border-shadow-width="0"
-            data-borders="false"
-            data-needle-type="arrow"
-            data-needle-width="2"
-            data-needle-circle-size="7"
-            data-needle-circle-outer="true"
-            data-needle-circle-inner="false"
-            data-animation-duration="1500"
-            data-animation-rule="linear"
-            data-bar-width="10"
-            data-highlights='[
-        {
-            "from": -10,
-            "to": 10,
-            "color": "rgba(0,0, 255, .3)"
-        },
-        {
-            "from": 10,
-            "to": 30,
-            "color": "rgba(0,255, 0, .8)"
-        },
-        {
-          "from": 30,
-          "to": 40,
-          "color": "rgba(255,0, 0, .7)"
-        },
-        {
-          "from": 40,
-          "to": 60,
-          "color": "rgba(255,255, 51, .8)"
-        }]'
-            data-value-int="2"
-            data-value-dec="2"
-          >
-          </canvas>
+          <canvas id="gauTempMin"> </canvas>
         </div>
 
         <div>
-          <canvas
-            id="gauTempMax"
-            data-type="linear-gauge"
-            data-width="100"
-            data-height="250"
-            data-units="°C"
-            data-title="Temp Max"
-            data-min-value="0"
-            data-start-angle="90"
-            data-ticks-angle="180"
-            data-value-box="true"
-            data-max-value="60"
-            data-major-ticks="[-10,0, 10, 20, 30, 40, 50 ,60]"
-            data-minor-ticks="2"
-            data-stroke-ticks="true"
-            data-color-plate="#222"
-            data-color-numbers="#eee"
-            data-color-title="rgba(255,0,0, 1)"
-            data-color-units="#ccc"
-            data-border-shadow-width="0"
-            data-borders="false"
-            data-needle-type="arrow"
-            data-needle-width="2"
-            data-needle-circle-size="7"
-            data-needle-circle-outer="true"
-            data-needle-circle-inner="false"
-            data-animation-duration="1500"
-            data-animation-rule="linear"
-            data-bar-width="10"
-            data-highlights='[
-       {
-           "from": -10,
-           "to": 10,
-           "color": "rgba(0,0, 255, .3)"
-       },
-       {
-           "from": 10,
-           "to": 30,
-           "color": "rgba(0,255, 0, .8)"
-       },
-       {
-         "from": 30,
-         "to": 40,
-         "color": "rgba(255,0, 0, .7)"
-       },
-       {
-         "from": 40,
-         "to": 60,
-         "color": "rgba(255,255, 51, .8)"
-       }
- 
-        ]'
-            data-value-int="2"
-            data-value-dec="2"
-          >
-          </canvas>
+          <canvas id="gauTempMax"> </canvas>
         </div>
 
         <div>
-          <canvas
-            id="gauHum"
-            data-type="radial-gauge"
-            data-width="250"
-            data-height="250"
-            data-units="%Hr"
-            data-title="Humedad"
-            data-min-value="0"
-            data-max-value="100"
-            data-major-ticks="0,10,20,30,40,50,60,70,80,90,100"
-            data-minor-ticks="2"
-            data-stroke-ticks="true"
-            data-highlights='[
-                  {"from": 0, "to": 40, "color": "rgba(255,0, 0, .7)"},
-                  {"from": 40, "to": 100, "color": "rgba(0, 0, 255, .3)"}
-              ]'
-            data-value-int="2"
-            data-value-dec="0"
-            data-color-major-ticks="#ddd"
-            data-color-minor-ticks="#ddd"
-            data-color-title="#eee"
-            data-color-units="#ccc"
-            data-color-numbers="#eee"
-            data-color-plate="#222"
-            data-border-shadow-width="0"
-            data-borders="true"
-            data-needle-type="arrow"
-            data-needle-width="2"
-            data-needle-circle-size="7"
-            data-needle-circle-outer="true"
-            data-needle-circle-inner="false"
-            data-animation-duration="1500"
-            data-animation-rule="elastic"
-            data-color-border-outer="#333"
-            data-color-border-outer-end="#111"
-            data-color-border-middle="#222"
-            data-color-border-middle-end="#111"
-            data-color-border-inner="#111"
-            data-color-border-inner-end="#333"
-            data-color-needle-shadow-down="#333"
-            data-color-needle-circle-outer="#333"
-            data-color-needle-circle-outer-end="#111"
-            data-color-needle-circle-inner="#111"
-            data-color-needle-circle-inner-end="#222"
-            data-value-box-border-radius="0"
-            data-color-value-box-rect="#222"
-            data-color-value-box-rect-end="#333"
-            data-font-value="Led"
-            data-font-numbers="Led"
-            data-font-title="Led"
-            data-font-units="Led"
-          >
-          </canvas>
+          <canvas id="gauHum"> </canvas>
         </div>
 
         <div>
-          <canvas
-            id="gauPres"
-            data-type="radial-gauge"
-            data-width="250"
-            data-height="250"
-            data-units="mb"
-            data-title="Presion Atmosferica"
-            data-min-value="850"
-            data-max-value="1200"
-            data-major-ticks="[850,900,950,1000,1050,1100,1150,1200]"
-            data-minor-ticks="2"
-            data-stroke-ticks="true"
-            data-highlights='[
-                {"from": 850, "to": 1000, "color": "rgba(0,0, 255, .3)"},
-                {"from": 1000, "to": 1200, "color": "rgba(0, 255, 0, .7)"}
-            ]'
-            data-value-int="4"
-            data-value-dec="0"
-            data-color-major-ticks="#ddd"
-            data-color-minor-ticks="#ddd"
-            data-color-title="#eee"
-            data-color-units="#ccc"
-            data-color-numbers="#eee"
-            data-color-plate="#222"
-            data-border-shadow-width="0"
-            data-borders="true"
-            data-needle-type="arrow"
-            data-needle-width="2"
-            data-needle-circle-size="7"
-            data-needle-circle-outer="true"
-            data-needle-circle-inner="false"
-            data-animation-duration="1500"
-            data-animation-rule="linear"
-            data-color-border-outer="#333"
-            data-color-border-outer-end="#111"
-            data-color-border-middle="#222"
-            data-color-border-middle-end="#111"
-            data-color-border-inner="#111"
-            data-color-border-inner-end="#333"
-            data-color-needle-shadow-down="#333"
-            data-color-needle-circle-outer="#333"
-            data-color-needle-circle-outer-end="#111"
-            data-color-needle-circle-inner="#111"
-            data-color-needle-circle-inner-end="#222"
-            data-value-box-border-radius="0"
-            data-color-value-box-rect="#222"
-            data-color-value-box-rect-end="#333"
-            data-font-value="Led"
-            data-font-numbers="Led"
-            data-font-title="Led"
-            data-font-units="Led"
-          >
-          </canvas>
+          <canvas id="gauPres"></canvas>
         </div>
 
         <div>
-          <canvas
-            id="gauCompas"
-            data-type="radial-gauge"
-            data-width="250"
-            data-height="250"
-            data-min-value="0"
-            data-max-value="360"
-            data-major-ticks="N,NE,E,SE,S,SW,W,NW,N"
-            data-minor-ticks="22"
-            data-ticks-angle="360"
-            data-start-angle="180"
-            data-stroke-ticks="false"
-            data-highlights="false"
-            data-color-border-outer="#333"
-            data-color-border-outer-end="#111"
-            data-color-plate="#222"
-            data-color-major-ticks="#f5f5f5"
-            data-color-minor-ticks="#ddd"
-            data-color-numbers="#ccc"
-            data-color-needle="rgba(240, 128, 128, 1)"
-            data-color-needle-end="rgba(255, 160, 122, .9)"
-            data-color-title="#eee"
-            data-value-box="false"
-            data-value-text-shadow="false"
-            data-color-circle-inner="#fff"
-            data-color-needle-circle-outer="#ccc"
-            data-needle-circle-size="15"
-            data-needle-circle-outer="false"
-            data-animation-rule="linear"
-            data-needle-type="arrow"
-            data-needle-width="2"
-            data-needle-circle-size="7"
-            data-needle-circle-outer="true"
-            data-needle-circle-inner="false"
-            data-borders="true"
-            data-border-inner-width="0"
-            data-border-middle-width="0"
-            data-border-outer-width="10"
-            data-color-border-outer="#ccc"
-            data-color-border-outer-end="#ccc"
-            data-color-needle-shadow-down="#222"
-            data-border-shadow-width="0"
-            data-animation-duration="1500"
-            data-value-box-border-radius="0"
-            data-color-value-box-rect="#222"
-            data-color-value-box-rect-end="#333"
-            data-font-value="Led"
-            data-font-numbers="Led"
-            data-font-title="Led"
-            data-font-units="Led"
-            data-value-int="3"
-            data-title="Compas"
-          >
-          </canvas>
+          <canvas id="gauCompas"> </canvas>
         </div>
 
         <div>
-          <canvas
-            id="gauVeloc"
-            data-type="radial-gauge"
-            data-width="250"
-            data-height="250"
-            data-units="m/s"
-            data-title="Velocidad Viento"
-            data-min-value="0"
-            data-max-value="30"
-            data-major-ticks="[0,5,10,15,20,25,30]"
-            data-minor-ticks="2"
-            data-stroke-ticks="true"
-            data-highlights='[
-                {"from": 0, "to": 10, "color": "rgba(0,255, 0, .8)"},
-                {"from": 10, "to": 15, "color": "rgba(255, 0, 0, .7)"},
-                {"from": 15, "to": 30, "color": "rgba(255, 255, 0, .7)"}
-            ]'
-            data-value-int="2"
-            data-value-dec="1"
-            data-color-major-ticks="#ddd"
-            data-color-minor-ticks="#ddd"
-            data-color-title="#eee"
-            data-color-units="#ccc"
-            data-color-numbers="#eee"
-            data-color-plate="#222"
-            data-border-shadow-width="0"
-            data-borders="true"
-            data-needle-type="arrow"
-            data-needle-width="2"
-            data-needle-circle-size="7"
-            data-needle-circle-outer="true"
-            data-needle-circle-inner="false"
-            data-animation-duration="1500"
-            data-animation-rule="linear"
-            data-color-border-outer="#333"
-            data-color-border-outer-end="#111"
-            data-color-border-middle="#222"
-            data-color-border-middle-end="#111"
-            data-color-border-inner="#111"
-            data-color-border-inner-end="#333"
-            data-color-needle-shadow-down="#333"
-            data-color-needle-circle-outer="#333"
-            data-color-needle-circle-outer-end="#111"
-            data-color-needle-circle-inner="#111"
-            data-color-needle-circle-inner-end="#222"
-            data-value-box-border-radius="0"
-            data-color-value-box-rect="#222"
-            data-color-value-box-rect-end="#333"
-            data-font-value="Led"
-            data-font-numbers="Led"
-            data-font-title="Led"
-            data-font-units="Led"
-          >
-          </canvas>
+          <canvas id="gauVeloc"> </canvas>
         </div>
+        
       </div>
       <!--  content polucion -->
 
@@ -412,6 +95,7 @@
     <div id="toast"></div>
 
     <script src="js/gauge.min.js"></script>
+    <script src="js/gauge.clima.config.js"></script>
     <script src="js/gauge.polucion.config.js"></script>
     <script src="js/index.js"></script>
 
