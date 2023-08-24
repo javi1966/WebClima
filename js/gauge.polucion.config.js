@@ -38,12 +38,12 @@
       },
       {
         from: 80,
-        to: 160,
+        to: 320,
         color: "rgba(255,0, 0, .7)",
       },
       {
-        from: 160,
-        to: 440,
+        from: 320,
+        to: 560,
         color: "rgba(255,255, 51, .8)",
       }
     ],
@@ -51,8 +51,8 @@
     valueDec: 1,
     strokeTicks: true,
     minorTicks: 2,
-    majorTicks: [0, 80, 160, 240, 320,400,420,440],
-    maxValue: 440,
+    majorTicks: [0, 80, 160, 240, 320, 400,480,560],
+    maxValue: 560,
     minValue: 0,
     title: "CO",
     units: "mg/m3",
