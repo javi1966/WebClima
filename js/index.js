@@ -151,7 +151,12 @@ const reloj = () => {
   HtmlHora.firstChild.textContent = hora;
   HtmlHora.lastChild.textContent = minu;
 
-  Fecha.innerHTML = Hora.toLocaleDateString("es");
+  
+  Fecha.innerHTML =Hora.toLocaleDateString("es", { // you can use undefined as first argument
+                                                  day: "2-digit",
+                                                  month: "2-digit",
+                                                  year: "numeric"
+                                                  })
 };
 
 //******************************************************************************* */
@@ -192,13 +197,7 @@ const medida = async () => {
      gaugePresion.value=data.main.pressure;
      gaugeCompas.value=data.wind.deg;
      gaugeVelocidad.value=data.wind.speed;
-     //document.getElementById("gauTempMin").setAttribute("data-value",data.main.temp_min)
-     //document.getElementById("gauTempMax").setAttribute("data-value",data.main.temp_max)
-     //document.getElementById("gauHum").setAttribute("data-value",data.main.humidity)
-     //document.getElementById("gauPres").setAttribute("data-value", data.main.pressure)
-     //document.getElementById("gauCompas").setAttribute("data-value",data.wind.deg)
-     //document.getElementById("gauVeloc").setAttribute("data-value",data.wind.speed)
-
+     
       //footer
 
       descripcion = data.weather[0].description;
@@ -211,7 +210,7 @@ const medida = async () => {
           ? horaLectura.getMinutes()
           : "0" + horaLectura.getMinutes();
 
-      let horaDiurna = `Amanece ${horaAmanecer.getHours()}:${horaAmanecer.getMinutes()},Anochece ${horaAnochecer.getHours()}:${horaAnochecer.getMinutes()}`;
+      let horaDiurna = `Amanece ${horaAmanecer.getHours()}:${horaAmanecer.getMinutes().toString().padStart(0,2)},Anochece ${horaAnochecer.getHours()}:${horaAnochecer.getMinutes().toString().padStart(2,0)}`;
                       
 
       console.log("ha " + horaAmanecer.getHours() + " han " + horaAnochecer);

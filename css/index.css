@@ -22,17 +22,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*width: 100%;*/
+  
+  width: 100%;
   background-color: rgba(2, 64, 31, 0.5);
   border-radius: 15px;
   border: 1px solid rgb(3, 143, 29);
   box-shadow: 3px 3px 3px 2px rgba(3, 171, 40, 0.2);
 }
 
-.content_clima canvas {
+/*.content_clima canvas {
   height: 250px;
   width:  250px;
-}
+}*/
 
 .content_polucion {
   display: flex;
@@ -45,10 +46,10 @@ body {
   box-shadow: 3px 3px 3px 2px rgba(3, 171, 40, 0.2);
 }
 
-.content_polucion canvas {
+/*.content_polucion canvas {
   height: 250px;
   width: 250px;
-}
+}*/
 
 #marText {
   color: white;
@@ -173,7 +174,7 @@ footer {
   animation: fade 2000ms infinite;
 }
 
-/*
+
 
 @media only screen and (min-width: 768px) {
   #idHora {
@@ -181,39 +182,38 @@ footer {
     font-size: 3.5em;
   }
 
-  canvas {
+  div > canvas {
     height: 150px;
     width: 150px;
   }
 }
 
-@media only screen and (min-width: 1025px) {
-
- 
-  
-  
-
-
-
-}
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 992px) {
 
   #idHora {
    
     font-size: 3.5em;
   }
 
-
-  .content_polucion canvas {
-    height: 250px;
-    width: 250px;
+  div canvas {
+    height: 150px;
+    width: 150px;
   }
-
-  .content_clima canvas {
-    height: 250px;
-    width: 250px;
-  }
+ 
 }
 
-*/
+@media only screen and (min-width: 1200px) {
+
+  #idHora {
+   
+    font-size: 5em;
+  }
+
+
+   div  canvas {
+    height: 250px;
+    width: 250px;
+  }
+
+ 
+}

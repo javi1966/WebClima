@@ -43,7 +43,7 @@
       },
       {
         from: 160,
-        to: 400,
+        to: 440,
         color: "rgba(255,255, 51, .8)",
       }
     ],
@@ -51,8 +51,8 @@
     valueDec: 1,
     strokeTicks: true,
     minorTicks: 2,
-    majorTicks: [0, 80, 160, 240, 320,400],
-    maxValue: 400,
+    majorTicks: [0, 80, 160, 240, 320,400,420,440],
+    maxValue: 440,
     minValue: 0,
     title: "CO",
     units: "mg/m3",
@@ -101,16 +101,22 @@
       },
       {
         from: 10,
-        to: 20,
+        to: 25,
         color: "rgba(255,0, 0, .7)",
+      },
+      {
+        from: 25,
+        to: 40,
+        color: "rgba(255,255, 0, .7)",
       }
+
     ],
     valueInt: 2,
     valueDec: 1,
     strokeTicks: true,
     minorTicks: 2,
-    majorTicks: [0, 5, 10, 15, 20],
-    maxValue: 20,
+    majorTicks: [0, 5, 10, 15, 20,25,30,35,40],
+    maxValue: 40,
     minValue: 0,
     title: "NO2",
     units: "mg/m3",
