@@ -132,7 +132,7 @@ const gauTempMax = new LinearGauge({
   height: "250",
   renderTo: "gauTempMax",
   units: "°C",
-  title: "Temp Min",
+  title: "Temp Max",
   minValue: "0",
   startAngle: "90",
   ticksAngle: "180",
